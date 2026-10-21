@@ -29,6 +29,7 @@ export default function MockItApp() {
       const response = await axios.post(`${serverUrl}/api/generate`, parsed, {withCredentials: true, headers:{"Content-Type":"application/json"}})
       const mockId = response.data.endpointId
       setGeneratedUrl(`http://localhost:8000/api/mock/${mockId}`)
+      setLoading(false)
 
     } catch (err) {
       setError("Invalid JSON format. Check commas and quotes.");
