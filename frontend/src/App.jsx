@@ -27,7 +27,6 @@ export default function MockItApp() {
       setLoading(true);
 
       const response = await axios.post(`${serverUrl}/api/generate`, parsed, {withCredentials: true, headers:{"Content-Type":"application/json"}})
-      console.log(response.data)
       const mockId = response.data.endpointId
       setGeneratedUrl(`http://localhost:8000/api/mock/${mockId}`)
 
