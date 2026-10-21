@@ -25,7 +25,6 @@ export default function MockItApp() {
       const parsed = JSON.parse(inputJson);
       setError(null);
       setLoading(true);
-      console.log(inputJson)
 
       const response = await axios.post(`${serverUrl}/api/generate`, parsed, {withCredentials: true, headers:{"Content-Type":"application/json"}})
       console.log(response.data)
