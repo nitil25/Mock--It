@@ -27,13 +27,6 @@ export default function MockItApp() {
       setLoading(true);
       console.log(inputJson)
 
-      // Simulating backend call (Replace with actual fetch/axios call)
-      // setTimeout(() => {
-      //   const mockId = Math.random().toString(36).substring(2, 9);
-      //   setGeneratedUrl(`http://localhost:5000/api/mock/${mockId}`);
-      //   setLoading(false);
-      // }, 500);
-
       const response = await axios.post(`${serverUrl}/api/generate`, parsed, {withCredentials: true, headers:{"Content-Type":"application/json"}})
       console.log(response.data)
       const mockId = response.data.endpointId
