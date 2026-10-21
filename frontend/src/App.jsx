@@ -48,7 +48,6 @@ export default function MockItApp() {
 
   return (
     <div className="min-h-screen bg-[#0b0f17] text-zinc-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
-      {/* Top Navigation */}
       <header className="border-b border-zinc-800/80 bg-[#0d121d]/60 backdrop-blur px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-mono font-bold text-lg shadow-lg shadow-indigo-500/20">
@@ -68,10 +67,8 @@ export default function MockItApp() {
         </div>
       </header>
 
-      {/* Main Studio Body */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
         
-        {/* Left Column: Editor (7 Cols) */}
         <section className="lg:col-span-7 flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Payload Builder</span>
@@ -119,16 +116,15 @@ export default function MockItApp() {
           </button>
         </section>
 
-        {/* Right Column: Endpoint & Inspector (5 Cols) */}
         <section className="lg:col-span-5 flex flex-col gap-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Endpoint Status</span>
 
           <div className="rounded-xl border border-zinc-800 bg-[#0d121d]/70 p-5 flex flex-col gap-4">
             <div className="flex items-center justify-between border-b border-zinc-800/80 pb-3">
               <span className="text-xs font-mono text-zinc-400">HTTP Method</span>
-              <span className="px-2 py-0.5 rounded text-xs font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              {<span className="px-2 py-0.5 rounded text-xs font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                 GET 200 OK
-              </span>
+              </span>}
             </div>
 
             <div className="flex flex-col gap-2">
@@ -155,7 +151,6 @@ export default function MockItApp() {
             </div>
           </div>
 
-          {/* Quick Explainer Card */}
           <div className="rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-4 text-xs text-zinc-400 leading-relaxed space-y-2">
             <p className="font-semibold text-zinc-300">How to consume this:</p>
             <p>Paste the generated URL into your frontend code (`fetch` or `axios.get()`). </p>
