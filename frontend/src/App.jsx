@@ -30,7 +30,6 @@ export default function MockItApp() {
       console.log(response.data)
       const mockId = response.data.endpointId
       setGeneratedUrl(`http://localhost:8000/api/mock/${mockId}`)
-      setLoading(false)
 
     } catch (err) {
       setError("Invalid JSON format. Check commas and quotes.");
